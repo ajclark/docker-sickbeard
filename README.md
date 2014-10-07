@@ -2,5 +2,5 @@
 
 # Build instructions
 
-* Build: `docker -t build .`
-* Run: `docker run -d --name="sickbeard_app" -p 8081:8081 -v /data:/mnt/media/TV sickbeard`
+* Build: `docker build -t sickbeard .`
+* Run: `docker run -d --name=sickbeard_app --restart=always -v /data/warehouse/sickbeard:/data -v /mnt/media:/mnt/media -p 8081:8081 sickbeard`
